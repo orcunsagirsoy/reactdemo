@@ -7,7 +7,8 @@ import {Row, Col} from 'react-bootstrap'
 
 export default function MovieInfo(props){
   const style = {
-    paddingLeft: '15px'
+    paddingLeft: '15px',
+    textAlign: 'left'
   };
 
     return(
@@ -15,7 +16,7 @@ export default function MovieInfo(props){
         <Row>
           <Title title={props.movie.title} />
         </Row>
-        <Row>
+        <Col>
           <Col xs={4}>
             <SubTitleWithIcon icon={'star'} title={props.movie.vote_average} />
           </Col>
@@ -25,7 +26,7 @@ export default function MovieInfo(props){
           <Col xs={4}>
             <SubTitle title={props.movie.release_date.substring(0,4)} />
           </Col>
-        </Row>
+        </Col>
         <Row>
           <Description category={'Overview'} description={props.movie.overview} />
         </Row>

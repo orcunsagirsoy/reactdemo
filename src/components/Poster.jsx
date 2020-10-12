@@ -8,7 +8,7 @@ export default function Poster(props){
 
   const StyledImg = styled.div`
     &:hover .image{
-       opacity:1;
+       opacity:0.85;
     }
     &:hover .title{
        opacity: ${props.info ? 1:0};
@@ -28,7 +28,7 @@ export default function Poster(props){
       {props.info &&
       <Info className="title">
         <h4>{props.title}</h4>
-        <Glyphicon glyph={'star'} /> {props.voteAverage} &nbsp;&nbsp; {props.release_date.substring(0,4)}
+        <Glyphicon glyph={'star'} />&nbsp;&nbsp; {props.voteAverage} &nbsp;&nbsp; {props.release_date.substring(0,4)}
       </Info>
       }
     </StyledImg>

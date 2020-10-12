@@ -6,7 +6,8 @@ import {Row, Col} from 'react-bootstrap'
 
 export default function StarInfo(props){
   const style = {
-    paddingLeft: '15px'
+    paddingLeft: '15px',
+    textAlign: 'left'
   };
 
     return(
@@ -14,14 +15,14 @@ export default function StarInfo(props){
         <Row>
           <Title title={props.star.name} />
         </Row>
-        <Row>
+        <Col>
           <Col xs={4}>
             <SubTitle title={props.star.gender === 1 ? 'Female' : 'Male'} />
           </Col>
           <Col xs={8}>
-            <SubTitle title={'Birthday ' + props.star.birthday} />
+            <SubTitle title={'Birthday: ' + props.star.birthday} />
           </Col>
-        </Row>
+        </Col>
         <Row>
           <Description category={'Biography'} description={props.star.biography} />
         </Row>

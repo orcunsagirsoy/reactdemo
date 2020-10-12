@@ -15,16 +15,17 @@ class StarDetail extends Component {
 
   render() {
     const {star, movies} = this.props;
+    
 
     if(star.hasOwnProperty('id')) {
       return(
         <Grid fluid={false}>
           <Row>
-            <Col xs={12} sm={6} md={4}>
+            <Col sm={12} md={6} lg={4}>
               <Poster id={star.id} path={star.profile_path} responsive />
             </Col>
-            <Col xs={12} sm={6} md={8}>
-              <StarInfo star={star}/>
+            <Col sm={12} md={6} lg={8} >
+              <StarInfo star={star} />
             </Col>
           </Row>
           <Row>

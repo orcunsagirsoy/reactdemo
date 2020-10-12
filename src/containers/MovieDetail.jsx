@@ -42,10 +42,10 @@ class MovieDetail extends Component {
       return(
         <Grid fluid={false}>
           <Row>
-            <Col xs={12} sm={6} md={4}>
+            <Col sm={12} md={6} lg={4}>
               <Poster id={movie.id} path={movie.poster_path} responsive />
             </Col>
-            <Col xs={12} sm={6} md={8}>
+            <Col sm={12} md={6} lg={8}>
               <MovieInfo movie={movie}/>
               <CastList data={casts.slice(0,CAST_MAX_NUM)} />
             </Col>
