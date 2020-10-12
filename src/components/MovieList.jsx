@@ -15,7 +15,7 @@ export default class MovieList extends Component{
       return movie.poster_path != null;
     }).map(function(movie) {
         return(
-          <Col xs={12} md={6} lg={4} key={movie.id} >
+          <Col xs={12} md={6} lg={3} key={movie.id} >
             <Link to={'/movie/'+movie.id} >
               <Poster info id={movie.id} 
                       path={movie.poster_path} 
